@@ -1,0 +1,24 @@
+{
+  "description": "Threshold calculation, ignore ballots not counting for candidates"
+  ,"include": ["test_stv/stv-002-base.json"]
+  ,"ballots_more": [
+  	[1, " A"],
+  	[1, ""],
+  	[1, " #"]
+  	]
+  ,"status_codes": [
+        ["A", "elected", 1, 12.0],
+        ["B", "elected", 2,  7.80547],
+        ["C", "defeated", 2, 3.0]
+        ]
+  ,"tally": {
+        "A": [12.0, 5.66667],
+        "B": [2.0, 7.80547],
+        "C": [3.0, 3.0],
+        ":Overvotes": [1.0, 1.0],
+        ":Abstentions": [1.0, 1.52777],
+        ":Other exhausted": [0.0, 0.0],
+        ":Residual surplus": [0.0, 0.00009]
+        }
+}
+

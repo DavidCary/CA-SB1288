@@ -1,0 +1,23 @@
+{
+  "description": "Tie breaker: effective in three rounds, version 3"
+  ,"include": ["test_irv/irv-008-base.json"]
+  ,"tie_breaker": " D C A B"
+  ,"options": {}
+  ,"elected": ["B"]
+  ,"status_codes": [
+        ["D", "defeated", 1, 18],
+        ["C", "defeated",  2, 24],
+        ["A", "defeated", 3, 36],
+        ["B", "elected", 3, 36]
+        ]
+  ,"tally": {
+        "D": [18],
+        "C": [18, 24],
+        "A": [18, 24, 36],
+        "B": [18, 24, 36],
+        ":Overvotes": [0, 0, 0],
+        ":Abstentions": [0, 0, 0],
+        ":Other exhausted": [0, 0, 0]
+        }
+}
+

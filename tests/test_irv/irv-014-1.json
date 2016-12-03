@@ -1,0 +1,19 @@
+{
+  "description": "Simple 3-candidate from 2nd plate to winner"
+  ,"include": ["test_irv/irv-014-base.json"]
+  ,"options": {"alternative_defeats": "N"}
+  ,"status_codes": [
+        ["AA", "defeated", 2, 8],
+        ["BB", "elected",  2, 10],
+        ["CC", "defeated", 1, 4]
+        ]
+  ,"tally": {
+        "AA": [8, 8],
+        "BB": [6, 10],
+        "CC": [4],
+        ":Overvotes": [0, 0],
+        ":Abstentions": [0, 0],
+        ":Other exhausted": [0, 0]
+        }
+}
+

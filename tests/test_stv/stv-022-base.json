@@ -1,0 +1,13 @@
+{
+  "description": "Multiple winners and transferred surplus in a round, base"
+  ,"candidates": " A B C D E F G"
+  ,"ballots": [
+        [16, " A C B E"],
+        [13, " B A C E"],
+        [7, " C A B E"],
+        [10, " D"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"tie_breaker": ""
+  ,"options": {}
+}

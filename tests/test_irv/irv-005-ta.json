@@ -1,0 +1,43 @@
+{
+  "description": "Irregular ranking patterns: 2nd round abstentions"
+  ,"include": ["test_irv/irv-005-base.json"]
+  ,"candidates": " AA BB CC t1 t2 t3 t4 t5 t6 t7"
+  ,"ballots_more": [
+        [1, "   t1"],
+        [1, "  t2 "],
+        [1, "  t3 t3"],
+        [1, " t4  "],
+        [1, " t5  t5"],
+        [1, " t6 t6 "],
+        [1, " t7 t7 t7"]
+        ]
+  ,"elected": ["BB"]
+  ,"status_codes": [
+        ["AA", "defeated", 2, 350],
+        ["BB", "elected",  2, 400],
+        ["CC", "defeated", 1, 200],
+        ["t1", "defeated", 1, 1],
+        ["t2", "defeated", 1, 1],
+        ["t3", "defeated", 1, 1],
+        ["t4", "defeated", 1, 1],
+        ["t5", "defeated", 1, 1],
+        ["t6", "defeated", 1, 1],
+        ["t7", "defeated", 1, 1]
+        ]
+  ,"tally": {
+        "AA": [300, 350],
+        "BB": [250, 400],
+       	"CC": [200],
+       	"t1": [1],
+       	"t2": [1],
+       	"t3": [1],
+       	"t4": [1],
+       	"t5": [1],
+       	"t6": [1],
+       	"t7": [1],
+        ":Overvotes": [0, 0],
+        ":Abstentions": [0, 7],
+        ":Other exhausted": [0, 0]
+        }
+}
+

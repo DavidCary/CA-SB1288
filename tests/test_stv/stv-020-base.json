@@ -1,0 +1,10 @@
+{
+  "description": "Thresholds: base"
+  ,"candidates": " A B C D E F G H"
+  ,"ballots": [
+        [84, " A B C D E F G H"]
+        ]
+  ,"max_ranking_levels": 8
+  ,"tie_breaker": " A B C D E F G H"
+  ,"options": {}
+}

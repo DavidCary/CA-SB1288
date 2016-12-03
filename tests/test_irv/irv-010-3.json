@@ -1,0 +1,22 @@
+{
+  "description": "Alternative defeats, requested and used - lower case"
+  ,"include": ["test_irv/irv-010-base.json"]
+  ,"options": {"alternative_defeats": "y"}
+  ,"status_codes": [
+        ["AA", "defeated", 3, 350],
+        ["BB", "elected",  3, 400],
+        ["CC", "defeated", 2, 220],
+        ["DD", "defeated", 1, 190],
+        ["EE", "defeated", 1, 9]
+        ]
+  ,"tally": {
+        "AA": [300, 300, 350],
+        "BB": [250, 250, 400],
+       	"CC": [200, 220],
+       	"DD": [190],
+       	"EE": [9],
+        ":Overvotes": [0, 0, 0],
+        ":Abstentions": [0, 179, 179],
+        ":Other exhausted": [0, 0, 20]
+        }
+}

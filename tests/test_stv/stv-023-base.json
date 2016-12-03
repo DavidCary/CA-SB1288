@@ -1,0 +1,16 @@
+{
+  "description": "Surplus: All Surplus residual, base"
+  ,"candidates": " A B C D E"
+  ,"nbr_seats_to_fill": 3
+  ,"ballots": [
+        [999, " A B C E"],
+        [1,   " A C D"],
+        [998, " B A C E"],
+        [999, " C A B E"],
+        [998, " D"],
+        [1,   " E B"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"tie_breaker": ""
+  ,"options": {}
+}

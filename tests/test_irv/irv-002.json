@@ -1,0 +1,32 @@
+{
+  "description": "Simple 4-candidate, from 3rd place to winner"
+  ,"nbr_seats_to_fill": 1
+  ,"candidates": " A B C D"
+  ,"ballots": [
+        [15, " A B C"],
+        [8, " B C D"],
+        [1,  " B"],
+        [1,  " B #"],
+        [8,  " C B A"],
+        [5,  " D C B"]
+        ]
+  ,"max_ranking_levels": 3
+  ,"tie_breaker": " A B C D"
+  ,"options": {}
+  ,"elected": ["C"]
+  ,"status_codes": [
+        ["A", "defeated", 3, 15],
+        ["B", "defeated",  2, 10],
+        ["C", "elected", 3, 21],
+        ["D", "defeated",  1, 5]
+        ]
+  ,"tally": {
+        "A": [15, 15, 15],
+        "B": [10, 10],
+        "C": [8, 13, 21],
+        "D": [5],
+        ":Overvotes": [0, 0, 1],
+        ":Abstentions": [0, 0, 1],
+        ":Other exhausted": [0, 0, 0]
+        }
+}

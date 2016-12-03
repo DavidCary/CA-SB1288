@@ -1,0 +1,13 @@
+{
+  "description": "Too few candidates: base"
+  ,"candidates": " A B"
+  ,"ballots": [
+        [20, " A B"],
+        [7,  " B A"],
+        [3,  " "]
+        ]
+  ,"nbr_seats_to_fill": 3
+  ,"max_ranking_levels": 3
+  ,"tie_breaker": ""
+  ,"options": {}
+}

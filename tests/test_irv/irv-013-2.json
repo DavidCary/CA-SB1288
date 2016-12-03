@@ -1,0 +1,21 @@
+{
+  "description": "Alternative defeats: requested but not eligible"
+  ,"include": ["test_irv/irv-013-base.json"]
+  ,"options": {"alternative_defeats": "Y"}
+  ,"status_codes": [
+        ["AA", "elected",  3, 520],
+        ["BB", "defeated", 3, 400],
+        ["CC", "defeated", 2, 200],
+        ["DD", "defeated", 1, 170]
+        ]
+  ,"tally": {
+        "AA": [300, 470, 520],
+        "BB": [250, 250, 400],
+       	"CC": [200, 200],
+       	"DD": [170],
+        ":Overvotes": [0, 0, 0],
+        ":Abstentions": [0, 0, 0],
+        ":Other exhausted": [0, 0, 0]
+        }
+}
+

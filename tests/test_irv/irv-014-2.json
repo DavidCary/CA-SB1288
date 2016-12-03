@@ -1,0 +1,23 @@
+{
+  "description": "Extra ballots and tie breaker change winner"
+  ,"include": ["test_irv/irv-014-base.json"]
+  ,"ballots_more": [
+        [2, " CC AA BB"]
+        ]
+  ,"options": {}
+  ,"elected": " CC"
+  ,"status_codes": [
+        ["AA", "defeated", 2, 8],
+        ["BB", "defeated",  1, 6],
+        ["CC", "elected", 2, 12]
+        ]
+  ,"tally": {
+        "AA": [8, 8],
+        "BB": [6],
+        "CC": [6, 12],
+        ":Overvotes": [0, 0],
+        ":Abstentions": [0, 0],
+        ":Other exhausted": [0, 0]
+        }
+}
+

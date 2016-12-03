@@ -1,0 +1,18 @@
+{
+  "description": "Too few candidates: one too few, version 1"
+  ,"include": ["test_stv/stv-024-base.json"]
+  ,"elected": ["A", "B"]
+  ,"status_codes": [
+        ["A", "elected",  1, 20.0],
+        ["B", "elected",  1, 7.0]
+        ]
+  ,"tally": {
+        "A": [20.0],
+        "B": [7.0],
+        ":Overvotes": [0.0],
+        ":Abstentions": [3.0],
+        ":Other exhausted": [0.0],
+        ":Residual surplus": [0.0]
+        }
+}
+

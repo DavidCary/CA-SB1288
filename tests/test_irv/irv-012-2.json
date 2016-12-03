@@ -1,0 +1,29 @@
+{
+  "description": "alternative defeats: requested and used twice in rounds 3 and 4 of 5"
+  ,"include": ["test_irv/irv-012-base.json"]
+  ,"options": {"alternative_defeats": "Y"}
+  ,"status_codes": [
+        ["AA", "defeated", 5, 94],
+        ["BB", "elected",  5, 95],
+        ["CC", "defeated", 4, 24],
+        ["DD", "defeated", 4, 23],
+        ["EE", "defeated", 3, 6],
+        ["FF", "defeated", 3, 4],
+        ["GG", "defeated", 2, 2],
+        ["HH", "defeated", 1, 1]
+        ]
+  ,"tally": {
+        "AA": [93, 93, 93, 94, 94],
+        "BB": [48, 48, 48, 48, 95],
+       	"CC": [24, 24, 24, 24],
+       	"DD": [12, 12, 14, 23],
+       	"EE": [6, 6, 6],
+       	"FF": [3, 4, 4],
+       	"GG": [2, 2],
+       	"HH": [1],
+        ":Overvotes": [0, 0, 0, 0, 0],
+        ":Abstentions": [0, 0, 0, 0, 0],
+        ":Other exhausted": [0, 0, 0, 0, 0]
+        }
+}
+

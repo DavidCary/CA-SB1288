@@ -1,0 +1,16 @@
+# git global ignore files
+
+# ignore editor backup files
+*~
+*.swp
+*.bak
+.coverage
+
+# ignore compiled python
+*.pyc
+__pycache__/
+
+# ignore other files
+/README.html
+/tests/temp_output/*.json
+/tests/htmlcov

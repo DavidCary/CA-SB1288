@@ -1,0 +1,33 @@
+{
+  "description": "Tie breaker: effective in three rounds, base"
+  ,"nbr_seats_to_fill": 1
+  ,"candidates": " A B C D"
+  ,"ballots": [
+        [3, " A B C"],
+        [3, " A B D"],
+        [3, " A C B"],
+        [3, " A C D"],
+        [3, " A D B"],
+        [3, " A D C"],
+        [3, " B A C"],
+        [3, " B A D"],
+        [3, " B C A"],
+        [3, " B C D"],
+        [3, " B D A"],
+        [3, " B D C"],
+        [3, " C B A"],
+        [3, " C B D"],
+        [3, " C A B"],
+        [3, " C A D"],
+        [3, " C D B"],
+        [3, " C D A"],
+        [3, " D B C"],
+        [3, " D B A"],
+        [3, " D C B"],
+        [3, " D C A"],
+        [3, " D A B"],
+        [3, " D A C"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"options": {}
+}

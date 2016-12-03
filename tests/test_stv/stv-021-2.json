@@ -1,0 +1,35 @@
+{
+  "description": "Thresholds: reach means win eventually or lose tie in last round, version 2"
+  ,"include": ["test_stv/stv-021-base.json"]
+  ,"ballots_more": [
+        [5,  " C A B E"],
+        [7,  " E"],
+        [5,  " F"],
+        [3,  " G"]
+  	]
+  ,"nbr_seats_to_fill": 4
+  ,"elected": ["A", "B", "C", "D"]
+  ,"status_codes": [
+        ["A", "elected",  1, 40.0],
+        ["B", "elected",  2, 25.0],
+        ["C", "elected",  3, 25.0],
+        ["D", "elected",  6, 20.0],
+        ["E", "defeated", 6, 12.0],
+        ["F", "defeated", 5, 5.0],
+        ["G", "defeated", 4, 3.0]
+        ]
+  ,"tally": {
+        "A": [40.0, 20.0, 20.0, 20.0, 20.0, 20.0],
+        "B": [13.0, 25.0, 20.0, 20.0, 20.0, 20.0],
+        "C": [12.0, 20.0, 25.0, 20.0, 20.0, 20.0],
+        "D": [20.0, 20.0, 20.0, 20.0, 20.0, 20.0],
+        "E": [7.0, 7.0, 7.0, 12.0, 12.0, 12.0],
+        "F": [5.0, 5.0, 5.0, 5.0, 5.0],
+        "G": [3.0, 3.0, 3.0, 3.0],
+        ":Overvotes": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 0.0, 0.0, 3.0, 8.0],
+        ":Other exhausted": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        }
+}
+

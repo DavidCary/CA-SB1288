@@ -1,0 +1,23 @@
+{
+  "description": "Alternative defeats: not requested but eligible in 1st and second round"
+  ,"include": ["test_irv/irv-011-base.json"]
+  ,"options": {"alternative_defeats": "N"}
+  ,"status_codes": [
+        ["AA", "elected", 4, 16],
+        ["BB", "defeated",  4, 15],
+        ["CC", "defeated", 3, 7],
+        ["DD", "defeated", 2, 3],
+        ["EE", "defeated", 1, 1]
+        ]
+  ,"tally": {
+        "AA": [16, 16, 16, 16],
+        "BB": [8, 8, 8, 15],
+       	"CC": [4, 4, 7],
+       	"DD": [2, 3],
+       	"EE": [1],
+        ":Overvotes": [0, 0, 0, 0],
+        ":Abstentions": [0, 0, 0, 0],
+        ":Other exhausted": [0, 0, 0, 0]
+        }
+}
+

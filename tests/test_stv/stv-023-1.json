@@ -1,0 +1,24 @@
+{
+  "description": "Surplus: All Surplus residual, version 1"
+  ,"include": ["test_stv/stv-023-base.json"]
+  ,"elected": ["A", "B", "C"]
+  ,"status_codes": [
+        ["A", "elected",  1, 1000.0],
+        ["B", "elected",  4, 999.999],
+        ["C", "elected",  2, 999.001],
+        ["D", "defeated", 4, 998.0],
+        ["E", "defeated", 3, 1.0]
+        ]
+  ,"tally": {
+        "A": [1000.0, 999.0, 999.0, 999.0],
+        "B": [998.0, 998.999, 998.999, 999.999],
+        "C": [999.0, 999.001, 999.0, 999.0],
+        "D": [998.0, 998.0, 998.0, 998.0],
+        "E": [1.0, 1.0, 1.0],
+        ":Overvotes": [0.0, 0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 0.0, 0.0],
+        ":Other exhausted": [0.0, 0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.001, 0.001]
+        }
+}
+

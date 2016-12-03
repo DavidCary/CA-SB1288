@@ -1,0 +1,38 @@
+{
+  "description": "Multiple winners and transferred surplus in a round, version 4"
+  ,"include": ["test_stv/stv-022-base.json"]
+  ,"ballots_more": [
+        [9, " A B C E"],
+	[12, " B A C E"],
+	[18, " C A B E"],
+        [8,  " D"],
+        [4,  " E"],
+        [2,  " F"],
+        [1,  " G F"]
+  	]
+  ,"nbr_seats_to_fill": 4
+  ,"elected": ["A", "B", "C", "E"]
+  ,"status_codes": [
+        ["A", "elected",  1, 25.0],
+        ["B", "elected",  1, 25.0],
+        ["C", "elected",  1, 25.0],
+        ["D", "defeated", 4, 18.0],
+        ["E", "elected",  4, 19.0],
+        ["F", "defeated", 3, 3.0],
+        ["G", "defeated", 2, 1.0]
+        ]
+  ,"tally": {
+        "A": [25.0, 20.0, 20.0, 20.0],
+        "B": [25.0, 20.0, 20.0, 20.0],
+        "C": [25.0, 20.0, 20.0, 20.0],
+        "D": [18.0, 18.0, 18.0, 18.0],
+        "E": [4.0, 19.0, 19.0, 19.0],
+        "F": [2.0, 2.0, 3.0],
+        "G": [1.0, 1.0],
+        ":Overvotes": [0.0, 0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 0.0, 3.0],
+        ":Other exhausted": [0.0, 0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.0, 0.0]
+        }
+}
+

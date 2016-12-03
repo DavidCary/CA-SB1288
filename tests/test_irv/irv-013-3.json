@@ -1,0 +1,21 @@
+{
+  "description": "Stop at majority: requested and used in second round"
+  ,"include": ["test_irv/irv-013-base.json"]
+  ,"options": {"stop_at_majority": true}
+  ,"status_codes": [
+        ["AA", "elected",  2, 470],
+        ["BB", "defeated", 2, 250],
+        ["CC", "defeated", 2, 200],
+        ["DD", "defeated", 1, 170]
+        ]
+  ,"tally": {
+        "AA": [300, 470],
+        "BB": [250, 250],
+       	"CC": [200, 200],
+       	"DD": [170],
+        ":Overvotes": [0, 0],
+        ":Abstentions": [0, 0],
+        ":Other exhausted": [0, 0]
+        }
+}
+

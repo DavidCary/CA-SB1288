@@ -1,0 +1,19 @@
+{
+  "description": "options base: stop at majority and alternative defeats in later rounds"
+  ,"nbr_seats_to_fill": 1
+  ,"candidates": " AA BB CC DD EE FF GG HH"
+  ,"ballots": [
+        [93, " AA"],
+        [48, " BB"],
+        [24, " CC BB"],
+        [12, " DD BB"],
+        [6, " EE DD BB"],
+        [3, " FF DD BB"],
+        [2, " GG DD BB"],
+	[1, " HH FF AA"]
+        ]
+  ,"max_ranking_levels": 3
+  ,"tie_breaker": ""
+  ,"elected": ["BB"]
+}
+

@@ -1,0 +1,23 @@
+{
+  "description": "Alternative defeats: requested and used, reducing by 2 rounds"
+  ,"include": ["test_irv/irv-011-base.json"]
+  ,"options": {"alternative_defeats": "Y"}
+  ,"status_codes": [
+        ["AA", "elected",  2, 16],
+        ["BB", "defeated", 2, 15],
+        ["CC", "defeated", 1, 4],
+        ["DD", "defeated", 1, 2],
+        ["EE", "defeated", 1, 1]
+        ]
+  ,"tally": {
+        "AA": [16, 16],
+        "BB": [8, 15],
+       	"CC": [4],
+       	"DD": [2],
+       	"EE": [1],
+        ":Overvotes": [0, 0],
+        ":Abstentions": [0, 0],
+        ":Other exhausted": [0, 0]
+        }
+}
+

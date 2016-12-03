@@ -1,0 +1,25 @@
+{
+  "description": "Tie breaker: effective in three rounds, version 1"
+  ,"include": ["test_stv/stv-008-base.json"]
+  ,"tie_breaker": " A B C D E"
+  ,"elected": ["D", "E"]
+  ,"status_codes": [
+        ["A", "defeated", 1, 36.0],
+        ["B", "defeated", 2, 45.0],
+        ["C", "defeated", 3, 60.0],
+        ["D", "elected",  3, 60.0],
+        ["E", "elected",  3, 60.0]
+        ]
+  ,"tally": {
+        "A": [36.0],
+        "B": [36.0, 45.0],
+        "C": [36.0, 45.0, 60.0],
+        "D": [36.0, 45.0, 60.0],
+        "E": [36.0, 45.0, 60.0],
+        ":Overvotes": [0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 0.0],
+        ":Other exhausted": [0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.0]
+        }
+}
+

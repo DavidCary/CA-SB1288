@@ -1,0 +1,16 @@
+{
+  "description": "Too few candidates: zero candidates, version 3"
+  ,"include": ["test_stv/stv-024-base.json"]
+  ,"candidates": ""
+  ,"ballots": [[3, " "]]
+  ,"elected": []
+  ,"status_codes": [
+        ]
+  ,"tally": {
+        ":Overvotes": [0.0],
+        ":Abstentions": [3.0],
+        ":Other exhausted": [0.0],
+        ":Residual surplus": [0.0]
+        }
+}
+

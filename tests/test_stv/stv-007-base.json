@@ -1,0 +1,18 @@
+{
+  "description": "Tie breaker: effective in 1st and 2nd round, base"
+  ,"nbr_seats_to_fill": 2
+  ,"candidates": " A B C D E"
+  ,"ballots": [
+        [18, " A B C"],
+        [4,  " A E D"],
+        [10, " B C A"],
+        [2,  " B E D"],
+        [10, " C B A"],
+        [2,  " C E D"],
+	[23, " D"],
+	[30, " E"]
+        ]
+  ,"max_ranking_levels": 3
+  ,"options": {}
+}
+

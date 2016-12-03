@@ -1,0 +1,16 @@
+{
+  "description": "Stop at majority, base: eligible in second round"
+  ,"nbr_seats_to_fill": 1
+  ,"candidates": " AA BB CC DD"
+  ,"ballots": [
+        [300, " AA BB CC"],
+        [250, " BB CC AA"],
+        [150, " CC BB AA"],
+        [50,  " CC AA BB"],
+	[170, " DD AA CC"]
+        ]
+  ,"max_ranking_levels": 3
+  ,"tie_breaker": ""
+  ,"elected": ["AA"]
+}
+

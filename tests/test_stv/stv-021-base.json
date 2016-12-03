@@ -1,0 +1,14 @@
+{
+  "description": "Thresholds: reach vs exceed to win, base"
+  ,"candidates": " A B C D E F G"
+  ,"ballots": [
+        [24, " A B C E"],
+        [16, " A C B E"],
+        [13, " B A C E"],
+        [7, " C A B E"],
+        [20, " D"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"tie_breaker": ""
+  ,"options": {}
+}

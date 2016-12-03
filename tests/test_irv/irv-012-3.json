@@ -1,0 +1,29 @@
+{
+  "description": "stop: requested not used; alternative defeats: not requested but eligible in round 3 and 5 of 7"
+  ,"include": ["test_irv/irv-012-base.json"]
+  ,"options": {"stop_at_majority": true, "alternative_defeats": "N"}
+  ,"status_codes": [
+        ["AA", "defeated", 7, 94],
+        ["BB", "elected",  7, 95],
+        ["CC", "defeated", 6, 24],
+        ["DD", "defeated", 5, 23],
+        ["EE", "defeated", 4, 6],
+        ["FF", "defeated", 3, 4],
+        ["GG", "defeated", 2, 2],
+        ["HH", "defeated", 1, 1]
+        ]
+  ,"tally": {
+        "AA": [93, 93, 93, 94, 94, 94, 94],
+        "BB": [48, 48, 48, 48, 48, 71, 95],
+       	"CC": [24, 24, 24, 24, 24, 24],
+       	"DD": [12, 12, 14, 17, 23],
+       	"EE": [6, 6, 6, 6],
+       	"FF": [3, 4, 4],
+       	"GG": [2, 2],
+       	"HH": [1],
+        ":Overvotes": [0, 0, 0, 0, 0, 0, 0],
+        ":Abstentions": [0, 0, 0, 0, 0, 0, 0],
+        ":Other exhausted": [0, 0, 0, 0, 0, 0, 0]
+        }
+}
+

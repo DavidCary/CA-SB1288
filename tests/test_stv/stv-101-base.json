@@ -1,0 +1,49 @@
+{
+  "description": "example mock election, base"
+  ,"candidates": " Bl BC Fn Hm Lt Lk Mr PK Rk TP"
+  ,"tie_breaker": " Rk Lk TP Bl PK Hm Fn BC Mr Lt"
+  ,"nbr_seats_to_fill": 5
+  ,"ballots": [
+    [1, " BC Lt Lk Mr Rk Bl TP PK Hm Fn"],
+    [1, " Fn Rk TP Lt Mr PK Hm BC Lk Bl"],
+    [1, " Hm Bl Lk Rk Lt TP PK BC Fn Mr"],
+    [1, " Hm Lk Lt"],
+    [1, " Hm Lk Lt Bl TP PK BC"],
+    [1, " Hm Lk Lt Rk Mr"],
+    [1, " Hm Lk Lt Rk TP PK Fn Bl Mr BC"],
+    [1, " Hm Lk Lt TP Bl Fn PK Rk Mr BC"],
+    [1, " Hm Lk Lt TP PK BC Fn Rk Mr Bl"],
+    [1, " Hm Lk Lt TP PK Rk"],
+    [1, " Hm Lt Bl Lk TP PK Mr Rk Fn BC"],
+    [1, " Hm Lt Lk Bl Fn TP Rk Mr PK BC"],
+    [1, " Hm Lt Lk Rk Bl PK TP Mr Fn BC"],
+    [1, " Hm Lt Lk Rk PK TP Fn Bl Mr BC"],
+    [1, " Hm Lt PK TP BC Lk Rk"],
+    [1, " Hm TP BC PK Bl Lt Rk Lk Fn Mr"],
+    [1, " Lk Bl Lt Fn Rk PK TP Mr BC"],
+    [1, " Lk Hm Rk Lt Fn PK Bl TP Mr BC"],
+    [1, " Lk Hm Rk Lt PK TP Fn Bl Mr BC"],
+    [1, " Lk Lt Fn Hm Bl Rk TP Mr PK BC"],
+    [1, " Lk Lt Fn Mr BC PK TP Rk Bl Hm"],
+    [1, " Lk Lt Rk Bl TP PK"],
+    [1, " Lk Mr Lt Bl Hm"],
+    [1, " Lk PK Rk Hm Fn"],
+    [1, " Lk Rk Lt Hm Bl TP Fn Mr PK BC"],
+    [1, " Lk TP PK Lt Rk Fn Bl BC Hm Mr"],
+    [1, " Lt Bl Lk Fn Hm Rk PK TP"],
+    [1, " Lt Bl Rk TP PK Lk Fn Mr BC Hm"],
+    [1, " Lt Hm Lk Bl Rk Fn TP PK Mr BC"],
+    [1, " Lt Hm Lk PK TP Rk Bl Mr Fn BC"],
+    [1, " Lt Hm Lk Rk Bl BC TP Fn PK Mr"],
+    [1, " Lt Hm Lk Rk Bl TP PK Fn Mr BC"],
+    [1, " Lt Lk Hm Rk Bl TP PK Fn Mr BC"],
+    [1, " Lt Lk Rk Fn"],
+    [1, " Lt Lk Rk Fn Hm"],
+    [1, " Lt Rk Lk TP PK Bl Fn Hm Mr BC"],
+    [1, " Mr Rk Hm Lt Lk Fn BC PK TP Bl"],
+    [1, " PK Hm Lt TP Lk Bl BC Fn Rk Mr"],
+    [1, " Rk Lt Hm Lk Bl PK"]
+    ]
+  ,"max_ranking_levels": 10
+  ,"options": {}
+}

@@ -1,0 +1,20 @@
+{
+  "description": "Irregular ranking patterns: none provided"
+  ,"include": ["test_irv/irv-005-base.json"]
+  ,"ballots_more": [ ]
+  ,"elected": ["BB"]
+  ,"status_codes": [
+        ["AA", "defeated", 2, 350],
+        ["BB", "elected",  2, 400],
+        ["CC", "defeated", 1, 200]
+        ]
+  ,"tally": {
+        "AA": [300, 350],
+        "BB": [250, 400],
+       	"CC": [200],
+        ":Overvotes": [0, 0],
+        ":Abstentions": [0, 0],
+        ":Other exhausted": [0, 0]
+        }
+}
+

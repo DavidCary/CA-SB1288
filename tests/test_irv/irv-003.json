@@ -1,0 +1,22 @@
+{
+  "description": "Raise exception on nbr_seats_to_fill"
+  ,"nbr_seats_to_fill": -1
+  ,"candidates": " A"
+  ,"ballots": [
+        [1, " A"]
+        ]
+  ,"max_ranking_levels": 3
+  ,"tie_breaker": " A"
+  ,"options": {}
+  ,"elected": ["A"]
+  ,"status_codes": [
+        ["A", "elected", 1, 1]
+        ]
+  ,"tally": {
+        "A": [1],
+        ":Overvotes": [0],
+        ":Abstentions": [0],
+        ":Other exhausted": [0]
+        }
+  ,"exception": ["RcvValueError", "nbr_seats_to_fill not >= 1:"]
+}
