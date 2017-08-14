@@ -58,11 +58,11 @@ multi-winner RCV, also known as single transferable vote (STV).
 For multi-winner RCV, SB 1288 specifies a version of the weighted
 inclusive Gregory method, so that when a winner's surplus is distributed
 to other candidates, all ballots counting for that winner are
-transeferred, but each ballot is transferred at a reduced transfer value
-representing that ballot's share of the winner's surplus, which is in
-proportion to the winner's total vote count.  The winner retains a vote
-total equal to the threshold.  As a result, a ballot can subsequently
-count for a subsequent candidate as only a fraction of a whole vote.
+transferred, but each ballot is transferred at a reduced transfer value
+representing that ballot's share of the winner's surplus as a portion of
+the winner's total vote count.  The winner retains a vote total equal to
+the threshold.  As a result, a ballot can subsequently count for a
+subsequent candidate as only a fraction of a whole vote.
 
 Both single- and multi-winner algorithms can be invoked with the
 __`sb1288.tabulate()`__ function, which takes as a first argument the
