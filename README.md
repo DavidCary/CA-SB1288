@@ -20,8 +20,7 @@ choice voting (RCV).
 This is a reference implementation in Python of the core vote counting
 algorithms for ranked choice voting (RCV) as specified by
 [California Senate Bill 1288 (2016)](
-http://leginfo.legislature.ca.gov\
-/faces/billNavClient.xhtml?bill_id=201520160SB1288 "SB-1288").
+http://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160SB1288).
 
 SB 1288 was passed by the California Legislature but was vetoed by 
 Governor Jerry Brown.  Though it did not become law, it still serves 
