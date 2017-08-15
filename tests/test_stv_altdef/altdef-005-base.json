@@ -1,0 +1,21 @@
+{
+  "description": "Multiple-defeats in second round with pending surplus: base"
+  ,"nbr_seats_to_fill": 2
+  ,"candidates": " A B C D E F G H"
+  ,"ballots": [
+        [33, " A E B D"],
+        [18, " B C D E"],
+        [17, " C D E F"],
+        [2,  " D A B G"],
+	[15, " D C F G"],
+	[8,  " E B A C"],
+	[4,  " F B C A"],
+	[3,  " G C B A"],
+	[2,  " H A E B"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"tie_breaker": ""
+  ,"options": {}
+  ,"elected": " A C"
+}
+

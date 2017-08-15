@@ -1,0 +1,30 @@
+{
+  "description": "Multiple-defeats in second round with pending surplus: altdef"
+  ,"include": ["test_stv_altdef/altdef-005-base.json"]
+  ,"options": {"alternative_defeats": "Y"}
+  ,"status_codes": [
+        ["A", "elected",  2, 35.0],
+        ["B", "defeated", 4, 32.0],
+        ["C", "elected",  4, 35.0],
+        ["D", "defeated", 3, 17.0],
+        ["E", "defeated", 2, 8.0],
+        ["F", "defeated", 2, 4.0],
+        ["G", "defeated", 2, 3.0],
+        ["H", "defeated", 1, 2.0]
+        ]
+  ,"tally": {
+        "A": [33.0, 35.0, 35.0, 35.0],
+        "B": [18.0, 18.0, 30.0, 32.0],
+        "C": [17.0, 17.0, 20.0, 35.0],
+        "D": [17.0, 17.0, 17.0],
+        "E": [8.0, 8.0],
+        "F": [4.0, 4.0],
+        "G": [3.0, 3.0],
+        "H": [2.0],
+        ":Overvotes": [0.0, 0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 0.0, 0.0],
+        ":Other exhausted": [0.0, 0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.0, 0.0]
+        }
+}
+

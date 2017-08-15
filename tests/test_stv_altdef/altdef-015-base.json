@@ -1,0 +1,17 @@
+{
+  "description": "C1 and C2 but only C3.2 (in R2, Defeat 2?): base"
+  ,"nbr_seats_to_fill": 2
+  ,"candidates": " A B C D E"
+  ,"ballots": [
+        [27, " A B C"],
+        [24, " B C A"],
+        [13, " C A B"],
+        [9, " D A C"],
+        [8, " E"]
+        ]
+  ,"max_ranking_levels": 3
+  ,"tie_breaker": ""
+  ,"options": {}
+  ,"elected": " A B"
+}
+

@@ -1,0 +1,23 @@
+{
+  "description": "Single-defeats in first round with pending surplus: altdef = Y"
+  ,"include": ["test_stv_altdef/altdef-003-base.json"]
+  ,"options": {"alternative_defeats": "Y"}
+  ,"status_codes": [
+        ["A", "elected",  1, 31.0],
+        ["B", "defeated", 3, 28.0],
+        ["C", "elected",  3, 31.0],
+        ["D", "defeated", 2, 14.0],
+        ["E", "defeated", 1, 7.0]
+        ]
+  ,"tally": {
+        "A": [31.0, 31.0, 31.0],
+        "B": [20.0, 26.0, 28.0],
+        "C": [18.0, 19.0, 31.0],
+        "D": [14.0, 14.0],
+        "E": [7.0],
+        ":Overvotes": [0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 0.0],
+        ":Other exhausted": [0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.0]
+        }
+}

@@ -1,0 +1,6 @@
+{
+  "description": "Results not changed by use of alternative defeats: altdef = N"
+  ,"include": ["test_stv_altdef/altdef-000-base.json"]
+  ,"options": {"alternative_defeats": "N"}
+}
+

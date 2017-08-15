@@ -1,0 +1,6 @@
+{
+  "description": "C2 and C3 but not C1 (in R14, Defeat 3?): altdef"
+  ,"include": ["test_stv_altdef/altdef-011-base.json"]
+  ,"options": {"alternative_defeats": "Y"}
+}
+

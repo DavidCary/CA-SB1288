@@ -11,6 +11,5 @@
 __pycache__/
 
 # ignore other files
-/README.html
 /tests/temp_output/*.json
 /tests/htmlcov

@@ -1,0 +1,42 @@
+{
+  "description": "Results not changed by use of alternative defeats: base"
+  ,"nbr_seats_to_fill": 2
+  ,"candidates": " A B C D E F G"
+  ,"ballots": [
+        [21, " A B C D"],
+        [22, " B C D E"],
+        [20, " C D E F"],
+        [10, " D A F G"],
+	[10, " D C F G"],
+	[11, " E A B C"],
+	[6,  " F C B A"],
+	[5,  " G E B A"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"tie_breaker": ""
+  ,"options": {}
+  ,"elected": " A C"
+  ,"status_codes": [
+        ["A", "elected",  5, 42.0],
+        ["B", "defeated", 5, 27.0],
+        ["C", "elected",  5, 36.0],
+        ["D", "defeated", 4, 20.0],
+        ["E", "defeated", 3, 16.0],
+        ["F", "defeated", 2, 6.0],
+        ["G", "defeated", 1, 5.0]
+        ]
+  ,"tally": {
+        "A": [21.0, 21.0, 21.0, 32.0, 42.0],
+        "B": [22.0, 22.0, 22.0, 27.0, 27.0],
+        "C": [20.0, 20.0, 26.0, 26.0, 36.0],
+        "D": [20.0, 20.0, 20.0, 20.0],
+        "E": [11.0, 16.0, 16.0],
+        "F": [6.0, 6.0],
+        "G": [5.0],
+        ":Overvotes": [0.0, 0.0, 0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 0.0, 0.0, 0.0],
+        ":Other exhausted": [0.0, 0.0, 0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.0, 0.0, 0.0]
+        }
+}
+

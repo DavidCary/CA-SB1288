@@ -1,0 +1,22 @@
+{
+  "description": "Multiple-defeats in second round with no surplus: base"
+  ,"nbr_seats_to_fill": 2
+  ,"candidates": " A B C D E F G H"
+  ,"ballots": [
+        [21, " A B C D"],
+        [22, " B C D E"],
+        [20, " C D E F"],
+        [9,  " D A F G"],
+	[8,  " D C F G"],
+	[5,  " E A B C"],
+	[5,  " E B A C"],
+	[5,  " F B C A"],
+	[4,  " G C B A"],
+	[3,  " H D C B"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"tie_breaker": ""
+  ,"options": {}
+  ,"elected": " A C"
+}
+

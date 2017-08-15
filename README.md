@@ -11,6 +11,7 @@ choice voting (RCV).
   * [Use examples](#use-examples)
   * [Testing](#testing)
   * [Limitations](#limitations)
+  * [Extension](#extension)
   * [Licensing](#licensing)
 
 
@@ -232,7 +233,7 @@ __`tests`__ directory and run one of the following commands:
 
 > python3 -m unittest discover
 
-That should run 154 tests, all without errors, typically in less than a
+That should run 182 tests, all without errors, typically in less than a
 second, though speeds vary depending on the type of computer being used.
 
 There are two kinds of tests in the __`tests`__ directory tree:
@@ -314,6 +315,18 @@ programs to run under different versions of Python, all test data has
 been limited to using ASCII characters.  Non-ASCII characters are not
 supported.
 
+## Extension <a id="extension"></a>
+
+This reference implementation includes an extension to the STV
+tabulation logic that provides for alternative conditions for defeating
+candidates: batch defeats of multiple candidates and deferred
+distribution of surplus.  These features were part of SB 1288 when it
+was introduced, but later removed and identified for specification as
+California Secretary of State regulations, as authorized by SB 1288.
+
+For more information about these features, please read this [additional
+description](stv-altdefs.html).
+
 ## Licensing <a id="licensing"></a>
 
 This project is licensed under the Apache License, Version 2.0 (the
@@ -329,5 +342,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-Copyright 2016-2017 David Cary; licensed under Apache License, Version
-2.0
+Copyright 2016 David Cary; licensed under Apache License, Version 2.0

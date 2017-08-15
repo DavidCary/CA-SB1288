@@ -1,0 +1,24 @@
+{
+  "description": "C1 and C2 but only C3.2 (in R2, Defeat 2?): altdef"
+  ,"include": ["test_stv_altdef/altdef-015-base.json"]
+  ,"options": {"alternative_defeats": "Y"}
+  ,"status_codes": [
+        ["A", "elected",  2, 27.0],
+        ["B", "elected", 2, 24.0],
+        ["C", "defeated",  2, 13.0],
+        ["D", "defeated", 2, 9.0],
+        ["E", "defeated", 1, 8.0]
+        ]
+  ,"tally": {
+        "A": [27.0, 27.0],
+        "B": [24.0, 24.0],
+        "C": [13.0, 13.0],
+        "D": [9.0, 9.0],
+        "E": [8.0],
+        ":Overvotes": [0.0, 0.0],
+        ":Abstentions": [0.0, 8.0],
+        ":Other exhausted": [0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0]
+        }
+}
+

@@ -1,0 +1,20 @@
+{
+  "description": "Single-defeats in first round with pending surplus: base"
+  ,"nbr_seats_to_fill": 2
+  ,"candidates": " A B C D E"
+  ,"ballots": [
+        [31, " A E D B"],
+        [20, " B C D E"],
+        [18, " C D E B"],
+        [2,  " D A B E"],
+	[12, " D C A E"],
+	[4,  " E B A C"],
+	[2,  " E B C A"],
+	[1,  " E C B A"]
+        ]
+  ,"max_ranking_levels": 4
+  ,"tie_breaker": ""
+  ,"options": {}
+  ,"elected": " A C"
+}
+

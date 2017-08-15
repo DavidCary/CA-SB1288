@@ -7,7 +7,6 @@ from __future__ import print_function
 
 from sb1288 import constants as K
 from sb1288 import errors
-from sb1288.ballot import Ballot  # this is probably not needed
 from sb1288 import status
 from sb1288 import validate
 
@@ -118,7 +117,7 @@ class Tabulation(object):
             - the empty string, indicating a skipped ranking
             - the string '#', indicating an overvote ranking
 
-          Trailing and skipped ranking codes do not have to be
+          Trailing, skipped (empty) ranking codes do not have to be
           specified.
 
           Note: This representation of candidate rankings relies on an
@@ -164,11 +163,12 @@ class Tabulation(object):
 
           Performing alternative defeats for IRV consists of defeating
           multiple candidates in a round and is an option explicitly
-          permitted by SB 1288.  Alternate defeats for STV are not
-          explicitly permitted by SB 1288 but could be a modification to
-          the STV vote counting rules that the California Secretary of
-          State could authorize.  The option is currently ignored for
-          multi-seat contests.
+          permitted by SB 1288.  Performing alternative defeats for STV
+          consists of defeating one or more candidates before any
+          consideration of transferring surplus in the round.  Alternate
+          defeats for STV are not explicitly permitted by SB 1288 but
+          are a modification to the STV vote counting rules that the
+          California Secretary of State could authorize.
 
           The value for this option may be one of the following
           case-insensitive string values, indicating when to do
@@ -458,7 +458,6 @@ class Tabulation(object):
       # do regular, single-candidate defeat, after resolving any ties
       defeated_this_round = self.get_single_defeat_candidate()
       self.defeat_candidates(defeated_this_round)
-    #print('defeats =', defeats)
     self.transfer_from_defeated(defeated_this_round)
     return True
 
@@ -494,14 +493,21 @@ class Tabulation(object):
     if len(self.elected()) == self.nbr_seats_to_fill:
       self.defeat_candidates(self.continuing())
       return False
-    # check for surplus to be transferred
-    if candidates_with_surplus:
+    # check for alternative defeats
+    #   (a.k.a batch elimination and/or deferred surplus transfers)
+    defeated_this_round = set()
+    alt_defeats_option = self.get_alt_defeats_option()
+    if alt_defeats_option ==  K.OPTION_ALTERNATIVE_DEFEATS_YES:
+      # do alternative defeats
+      defeated_this_round = self.get_stv_alternative_defeats()
+      self.defeat_candidates(defeated_this_round)
+    if not defeated_this_round and candidates_with_surplus:
       # transfer surplus
       self.transfer_surplus(candidates_with_surplus)
-    # if no candidates had surplus transferred
+    # if no candidates had surplus transferred and
+    #       no candidates have yet been defeated this round,
     #   defeat a candidate with the fewest votes
-    defeated_this_round = set()
-    if not candidates_with_surplus:
+    if not candidates_with_surplus and not defeated_this_round:
       # do regular, single-candidate defeat, after resolving any ties
       defeated_this_round = self.get_single_defeat_candidate()
       self.defeat_candidates(defeated_this_round)
@@ -768,5 +774,53 @@ class Tabulation(object):
       self.ballots_for[candidate] = []
       self.total_residual_surplus += surplus_votes - transferred_votes
 
+  def get_stv_alternative_defeats(self):
+    """
+    Get largest set of STV candidates that can be alternatively defeated
+
+    Returns
+    -------
+    A set of candidates that can be alternatively defeated without
+    changing which candidates are elected.
+
+    """
+    surplus_votes = self.get_candidates_with_surplus()
+    total_surplus_votes = sum([max(votes - self.threshold, K.ZERO)
+          for votes in surplus_votes.values()], self.zero_votes())
+    continuing_votes = self.continuing_votes()
+    total_votes_to_defeat = sum(continuing_votes.values(), self.zero_votes())
+    by_votes = sorted(continuing_votes.items(),
+          key=lambda item: item[1], reverse=True)
+    candidates_to_defeat = set(continuing_votes)
+    nbr_elected = len(self.elected())
+    most_continuing_votes = by_votes[0][1]
+    # Breaking out of this loop produces a set of candidates to defeat,
+    #     possibly an empty set.
+    # Not breaking out of this loop will produce an empty set.
+    nbr_defeated = len(by_votes)
+    for ix, (candidate, lowest_remaining_votes) in enumerate(by_votes):
+      total_votes_to_defeat -= lowest_remaining_votes
+      candidates_to_defeat.remove(candidate)
+      nbr_remaining = ix + 1
+      nbr_defeated -= 1
+      most_votes_to_defeat = (
+            by_votes[ix+1][1] if nbr_remaining < len(by_votes) else K.ZERO)
+      cond_3_4_2 = (total_votes_to_defeat - most_votes_to_defeat <=
+                self.threshold - most_continuing_votes)
+      cond_3_4_1 = total_surplus_votes == K.ZERO
+      cond_3_4 = cond_3_4_1 and cond_3_4_2
+      cond_3_3 = (total_votes_to_defeat + total_surplus_votes <=
+                self.threshold - most_continuing_votes)
+      cond_3_2 = nbr_remaining + nbr_elected == self.nbr_seats_to_fill
+      cond_3_1 = nbr_elected == self.nbr_seats_to_fill - 1
+      cond_3 = cond_3_1 or cond_3_2 or cond_3_3 or cond_3_4
+      cond_2 = (total_votes_to_defeat + total_surplus_votes <
+              lowest_remaining_votes)
+      cond_1 = nbr_remaining + nbr_elected >= self.nbr_seats_to_fill
+      cond_alt_def = cond_1 and cond_2 and cond_3
+      # Test top-level condititions
+      if cond_1 and cond_2 and cond_3:
+        break
+    return candidates_to_defeat
 
 

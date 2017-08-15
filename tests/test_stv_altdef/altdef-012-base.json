@@ -1,0 +1,36 @@
+{
+  "description": "C1 and C3 but not C2 (in R1, Defeat 3?): base"
+  ,"nbr_seats_to_fill": 2
+  ,"candidates": " A B C D E"
+  ,"ballots": [
+        [9, " A B C"],
+        [8, " B C A"],
+        [5, " C A B"],
+        [2, " D C"],
+        [1, " D"],
+        [2, " E C"]
+        ]
+  ,"max_ranking_levels": 3
+  ,"tie_breaker": " B C"
+  ,"options": {}
+  ,"elected": " A C"
+  ,"status_codes": [
+        ["A", "elected",  3, 9.0],
+        ["B", "defeated", 3, 8.0],
+        ["C", "elected",  3, 9.0],
+        ["D", "defeated", 2, 3.0],
+        ["E", "defeated", 1, 2.0]
+        ]
+  ,"tally": {
+        "A": [9.0, 9.0, 9.0],
+        "B": [8.0, 8.0, 8.0],
+        "C": [5.0, 7.0, 9.0],
+        "D": [3.0, 3.0],
+        "E": [2.0],
+        ":Overvotes": [0.0, 0.0, 0.0],
+        ":Abstentions": [0.0, 0.0, 1.0],
+        ":Other exhausted": [0.0, 0.0, 0.0],
+        ":Residual surplus": [0.0, 0.0, 0.0]
+        }
+}
+
