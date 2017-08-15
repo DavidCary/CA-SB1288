@@ -1,5 +1,6 @@
 # -*- encoding=utf-8 -*-
-# Copyright 2016 David Cary; licensed under the Apache License, Version 2.0
+# Copyright 2016-2017 David Cary; licensed under the Apache License,
+#       Version 2.0
 """Tabulate ranked choice voting (RCV) per California SB 1288"""
 
 from __future__ import print_function
@@ -408,8 +409,6 @@ class Tabulation(object):
     self.nbr_round += 1
     if self.testing['stop_at_begin'] == self.nbr_round:
       return False
-    # print()
-    # print('nbr_round =', self.nbr_round)
     if self.nbr_round == 1:
       # initial assignment to highest ranked continuing candidate (hrcc)
       self.assign_ballots(self.ballots)
@@ -417,10 +416,6 @@ class Tabulation(object):
     self.update_candidate_status_tally()
     if self.testing['stop_after_status_update'] == self.nbr_round:
       return False
-    # print('tallies =', self.tallies)
-    # print('ballots_for =', self.ballots_for)
-    # print('status =', {candidate: status2.as_dict()
-    #       for candidate, status2 in self.status.items()})
 
     # check for special cases of few candidates
     if self.nbr_round == 1:
@@ -477,22 +472,15 @@ class Tabulation(object):
     self.nbr_round += 1
     if self.testing['stop_at_begin'] == self.nbr_round:
       return False
-    # print()
-    # print('nbr_round =', self.nbr_round)
     if self.nbr_round == 1:
       # initial assignment to highest ranked continuing candidate (hrcc)
       self.assign_ballots(self.ballots)
       self.threshold = self.total_votes_for_candidates().__div__(
             self.nbr_seats_to_fill + 1, True)
-      # print('threshold =', self.threshold)
     self.tally_votes_for_assigned_ballots()
     self.update_candidate_status_tally()
     if self.testing['stop_after_status_update'] == self.nbr_round:
       return False
-    # print('tallies =', self.tallies)
-    # print('ballots_for =', self.ballots_for)
-    # print('status =', {candidate: status2.as_dict()
-    #       for candidate, status2 in self.status.items()})
 
     # check for electing all continuing candidates
     if (self.nbr_round == 1 and
@@ -501,10 +489,7 @@ class Tabulation(object):
       return False
     # candidates with more than a threshold of votes are elected
     candidates_with_surplus = self.get_candidates_with_surplus()
-    # print('candidates_with_surplus =', candidates_with_surplus)
     self.elect_candidates(set(candidates_with_surplus) - self.elected())
-    # print('status =', {candidate: status2.as_dict()
-    #       for candidate, status2 in self.status.items()})
     # if enough candidates are elected, defeat all continuing candidates
     if len(self.elected()) == self.nbr_seats_to_fill:
       self.defeat_candidates(self.continuing())
@@ -520,7 +505,6 @@ class Tabulation(object):
       # do regular, single-candidate defeat, after resolving any ties
       defeated_this_round = self.get_single_defeat_candidate()
       self.defeat_candidates(defeated_this_round)
-    #print('defeated_this_round =', defeated_this_round)
     # check if all continuing candidates will be elected
     if (len(self.continuing()) + len(self.elected())
           == self.nbr_seats_to_fill):
@@ -556,7 +540,6 @@ class Tabulation(object):
               self.status[tab_code].status == K.STATUS_ELECTED and
               tab_code_tally == self.zero_votes()):
           tab_code_tally = self.votes_for_previously_elected(tab_code_tally)
-      # print('tab_code =', tab_code, ', tally =', tab_code_tally)
       self.tallies[tab_code].append(tab_code_tally)
 
   def update_candidate_status_tally(self):

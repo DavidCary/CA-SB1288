@@ -1,5 +1,6 @@
 # -*- encoding=utf-8 -*-
-# Copyright 2016 David Cary; licensed under the Apache License, Version 2.0
+# Copyright 2016-2017 David Cary; licensed under the Apache License,
+#       Version 2.0
 """Support for fast decimals with five decimal places
 
 This class provides defined behavior, relatively free from external
@@ -106,12 +107,6 @@ class Decimal5(object):
     fraction_pad = '0' * (_NBR_DECIMAL_PLACES - len(fraction_str))
     result = sign + str(int_part) + '.' + fraction_pad + fraction_str
     return result
-
-  #def __cmp__(self, value):
-  #    result = long(self._value_as_integer).__cmp__(
-  #            long(value._value_as_integer))
-  #    return result
-
 
   def __lt__(self, value):
     """Compare less than with another Decimal5 value"""

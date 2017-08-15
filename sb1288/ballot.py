@@ -1,5 +1,6 @@
 # -*- encoding=utf-8 -*-
-# Copyright 2016 David Cary; licensed under the Apache License, Version 2.0
+# Copyright 2016-2017 David Cary; licensed under the Apache License,
+#       Version 2.0
 """Support a ballot during RCV tabulation"""
 
 from __future__ import print_function
@@ -69,12 +70,6 @@ class Ballot(object):
 
     """
 
-    #print('Starting get_hrcc():')
-    #print('  ballot =', repr(self))
-    #print('  continuing_candidates =', continuing_candidates)
-    #print('  max_ranking_levels =', max_ranking_levels)
-    #raise ValueError('Stopping here #1.')
-    # self._current_index = 0   # always look from the beginning
     for ix, ranking_code in enumerate(self._rankings[self._current_index:]):
       if ranking_code == K.RANKING_CODE_OVERVOTE:
         self._current_index = ix
@@ -123,10 +118,6 @@ class Ballot(object):
 
     """
 
-    #if surplus_factor < K.ZERO or surplus_factor > K.ONE:
-    #  raise errors.RcvImplementationError(
-    #      'Surplus factor not between 0 and 1 inclusive.',
-    #      (('surplus factor', surplus_factor),))
     self._transfer_value *= surplus_factor
     return self._transfer_value
 
