@@ -319,9 +319,10 @@ supported.
 This reference implementation includes an extension to the STV
 tabulation logic that provides for alternative conditions for defeating
 candidates: batch defeats of multiple candidates and deferred
-distribution of surplus.  These features were part of SB 1288 when it
-was introduced, but later removed and identified for specification as
-California Secretary of State regulations, as authorized by SB 1288.
+distribution of surplus.  These features were part of preliminary
+versions of SB 1288, but were later removed and identified for
+specification as California Secretary of State regulations, as
+authorized by SB 1288.
 
 For more information about these features, please read this [additional
 description](stv-altdefs.html).
